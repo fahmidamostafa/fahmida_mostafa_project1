@@ -1,0 +1,461 @@
+article,aside,details,figcaption,figure,footer,header,hgroup,nav,section,summary{display:block;}audio,canvas,video{display:inline-block;}audio:not([controls]){display:none;height:0;}[hidden]{display:none;}html{font-family:sans-serif;-webkit-text-size-adjust:100%;-ms-text-size-adjust:100%;}a:focus{outline:thin dotted;}a:active,a:hover{outline:0;}h1{font-size:2em;}abbr[title]{border-bottom:1px dotted;}b,strong{font-weight:700;}dfn{font-style:italic;}mark{background:#ff0;color:#000;}code,kbd,pre,samp{font-family:monospace, serif;font-size:1em;}pre{white-space:pre-wrap;word-wrap:break-word;}q{quotes:\201C \201D \2018 \2019;}small{font-size:80%;}sub,sup{font-size:75%;line-height:0;position:relative;vertical-align:baseline;}sup{top:-.5em;}sub{bottom:-.25em;}img{border:0;}svg:not(:root){overflow:hidden;}fieldset{border:1px solid silver;margin:0 2px;padding:.35em .625em .75em;}button,input,select,textarea{font-family:inherit;font-size:100%;margin:0;}button,input{line-height:normal;}button,html input[type=button],/* 1 */input[type=reset],input[type=submit]{-webkit-appearance:button;cursor:pointer;}button[disabled],input[disabled]{cursor:default;}input[type=checkbox],input[type=radio]{box-sizing:border-box;padding:0;}input[type=search]{-webkit-appearance:textfield;-moz-box-sizing:content-box;-webkit-box-sizing:content-box;box-sizing:content-box;}input[type=search]::-webkit-search-cancel-button,input[type=search]::-webkit-search-decoration{-webkit-appearance:none;}textarea{overflow:auto;vertical-align:top;}table{border-collapse:collapse;border-spacing:0;}body,figure{margin:0;}legend,button::-moz-focus-inner,input::-moz-focus-inner{border:0;padding:0;}
+
+.clearfix:after {visibility: hidden; display: block; font-size: 0; content: ''; clear: both; height: 0; }
+
+* { -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box; }
+
+html {
+    font-size: 125%;
+}
+
+p {
+    margin: 10px 0;
+    color: white;
+    line-height: 1.5;
+}
+
+header {
+    background: #C1D8C5;
+}
+
+.featured, .activities, .footerTop {
+    background: #013220;
+}
+
+.footerBottom {
+    background: #000;
+}
+
+a {
+    text-decoration: none;
+    text-transform: uppercase;
+    color: white;
+}
+
+.wrapper {
+    max-width: 1200px;
+    margin: 0 auto;
+    border: 2px solid rebeccapurple;
+    padding: 110px 0;
+}
+
+@media (max-width: 400px) {
+    .wrapper {
+            padding: 50px 20px;
+    }
+}
+
+/************************* HEADER STYLES *************************/
+
+header {
+    background: url(../assets/image-1.png);
+    min-height: 100vh;
+    background-size: cover;
+    background-attachment: fixed;
+    /* background-repeat: no-repeat; */
+    /* background-position: center 30%; */
+}
+
+header .wrapper {
+    min-height: inherit;
+    padding: 0;
+}
+
+header ul {
+    text-align: center;
+}
+
+ul {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+}
+
+li {
+    padding: 5px 10px;
+    background: lightcoral;
+}
+
+nav {
+    padding-top: 25px;
+    font-size: 1.1rem;
+    font-family: 'CormorantGaramond';
+}
+
+nav ul li {
+    float: left;
+}
+
+nav ul li:nth-of-type(4n + 1) {
+    padding-left: 0;    /* taken from margin example; how to resolve padding issue? */
+}
+
+@media (max-width: 400px) {
+    nav {
+        display: none;
+    }
+}
+
+h1 {
+    color: white;
+    text-transform: uppercase;
+    font-family: 'Fredericka the Great';
+    font-size: 5rem;
+    text-align: right;
+    margin: 0;
+    position: absolute;
+    bottom: 50%;
+    right: 10%;
+}
+
+span {
+    display: block;
+}
+
+/* when resizing horizontally, h1 does not remain right-aligned */
+
+@media (max-width: 400px) {
+    .h1Wrapper {
+        bottom: 0;
+        right: 0;
+        top: 5%;
+        left: 5%;
+    }
+
+    header h1 {
+        font-size: 1rem;
+    }
+}
+
+.socialMedia {
+    position: absolute;
+    bottom: 40px;
+    right: 40px;
+}
+
+@media (max-width: 400px) {
+    .socialMedia {
+        display: none;
+    }
+}
+
+/************************* SECTION 1 STYLES *************************/
+
+.featured .storyImg {
+    width: calc(37% - 40px);
+    margin-right: 40px;
+    float: left;
+}
+
+@media (max-width: 400px) {
+    .featured .storyImg {
+        width: 100%;
+        float: none;
+    }
+}
+
+.storyImg img {
+    width: 100%;
+    display: block;
+}
+
+h2 {
+    color: #013220;
+    text-transform: uppercase;
+    font-family: 'Fredericka the Great';
+    font-size: 2.5rem;
+    margin: 0;
+}
+
+@media (max-width: 400px) {
+    h2 {
+        font-size: 1.9rem;
+        margin: 50px 0 20px 0;
+    }
+}
+
+.featured h2 {
+    color: #fff;
+}
+
+.storyContent {
+    width: 63%;
+    float: left;
+}
+
+@media (max-width: 400px) {
+    .storyContent {
+        width: 100%;
+    }
+}
+
+button {
+    width: 9rem;
+    text-transform: uppercase;
+    border: none;
+    font-family: 'CormorantGaramond';
+    padding: 16px 30px;
+    margin-top: 3%;
+}
+
+@media (max-width: 400px) {
+    button {
+        display: block;
+        margin: 40px auto 0 auto;
+    }
+}
+
+.featured button {
+    background: #fff;
+    color: #013220;
+}
+
+/************************* SECTION 2 STYLES *************************/
+
+.gallery h2 {
+    text-align: center;
+    margin-bottom: 4.6rem;
+}
+
+@media (max-width: 400px) {
+    .gallery h2 {
+        margin: 0 auto;
+    }
+}
+
+.galleryItem {
+    width: calc((100% - 80px) / 3);
+    float: left;
+    background: navy;
+    margin: 0 20px;
+}
+
+.galleryItem img {
+    width: 100%;
+    display: block;
+}
+
+.galleryItem:nth-child(4n + 2) {
+    margin-left: 0;
+}
+
+.galleryItem:nth-child(4n) {
+    margin-right: 0;
+}
+
+@media (max-width: 400px) {
+    .galleryItem {
+        width: calc((100% - 10px) / 2);
+        margin: 0 5px;
+    }
+
+    .galleryItem:nth-child(4n + 3) {
+        margin-right: 0;
+    }
+
+    .galleryItem:nth-child(4n) {
+        display: none;
+    }
+}
+
+/************************* SECTION 3 STYLES *************************/
+
+.slot {
+    width: calc((100% - 320px) / 3);
+    float: left;
+    margin: 0 80px;
+    background: lightblue;
+    font-size: 3rem;
+    text-align: center;
+    word-wrap: break-word;
+}
+
+@media (max-width: 400px) {
+    .slot {
+        float: none;
+        width: 100%;
+        margin: 0;
+    }
+}
+
+/* How to vertical align center? */
+
+.slot p {
+    font-size: 1.75rem;
+    font-family: 'CormorantGaramond';
+}
+
+.slot:nth-child(3n + 1) {
+    margin-left: 0;
+}
+
+.slot:nth-child(3n) {
+    margin-right: 0;
+}
+
+/************************* SECTION 4 STYLES *************************/
+
+.articles .wrapper {
+    padding: 0;
+    margin: 0;
+    min-width: 100%;
+}
+
+.articleContent {
+    margin: 0;
+    float: left;
+    clear: none;
+    width: 50%;
+    border: 1px solid #808080;
+}
+
+.articleContent:nth-child(4n+3) {
+    clear: left;
+}
+
+.imgHolder img {
+    width: 100%;
+    display: block;
+}
+
+h3 {
+    color: #013220;
+    text-transform: uppercase;
+    font-family: 'Fredericka the Great';
+    font-size: 1.75rem;
+    margin: 0;
+}
+
+.articleContent p {
+    color: #1f2022;
+}
+
+.articleContent button {
+    background: #013220;
+    color: #fff;
+}
+
+/* .articleDesc article, .articleDesc .articleImg {
+    float: left;
+    width: 50%;
+}
+
+@media (max-width: 400px) {
+    .articleDesc article, .articleDesc .articleImg {
+        float: none;
+        width: 100%;
+        text-align: center;
+    }
+}
+
+article {
+    padding: 7.5% 6%;
+}
+
+@media (max-width: 400px) {
+    article {
+        padding: 1.8rem 1rem;
+    }
+}
+
+.articleImg {
+    background: peru;
+} */
+
+/************************* FOOTER TOP STYLES *************************/
+
+.footerTop {
+    font-family: 'Roboto';
+    color: #fff;
+}
+
+h4 {
+    font-family: 'CormorantGaramond';
+    font-size: 1.25rem;
+    text-transform: uppercase;
+    font-weight: 400;
+    margin: 5px 0;
+}
+
+.directory {
+    width: 26%;
+    text-align: left;
+    float: left;
+    font-family: 'CormorantGaramond';
+}
+
+@media (max-width: 400px) {
+
+}
+
+.searchBar {
+    width: 48%;
+    text-align: center;
+    float: left;
+}
+
+.email {
+    width: 75%;
+    padding: 10px 30px;
+    border: 1px solid #000;
+    float: left;
+}
+
+.submit {
+    font-family: 'CormorantGaramond';
+    text-transform: uppercase;
+    width: 25%;
+    padding: 2%;
+    border: 1px solid #000;
+    background: #000;
+    color: #fff;
+    float: left;
+}
+
+.contactInfo {
+    width: 26%;
+    text-align: right;
+    float: left;
+}
+
+.contactInfo p {
+    margin: 5px 0;
+}
+
+@media (max-width: 400px) {
+    footer p {
+        font-size: 0.8rem;
+    }
+
+    .directory, .searchBar, .contactInfo, .email, .submit {
+        float: none;
+        width: 100%;
+        margin: 0.25rem 0;
+        text-align: center;
+    }
+
+    .directory ul li {
+        float: left;
+        padding: 0.2rem;
+    }
+
+    .searchBar {
+        padding: 2.5rem 0;
+    }
+
+    .submit {
+        font-family: 'Roboto';
+    }
+}
+
+/************************* FOOTER BOTTOM STYLES *************************/
+
+.footerBottom {
+    clear: both;
+}
+
+.footerBottom p {
+    margin: 0;
+    text-align: center;
+    padding: 10px 0;
+}
