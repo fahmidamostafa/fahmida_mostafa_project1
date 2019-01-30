@@ -19,12 +19,25 @@
     <header>
         <div class="wrapper clearfix">
             <nav>
-                <ul class="clearfix">
-                    <li><a href="#">Home</a></li>
-                    <li><a href="#">About</a></li>
-                    <li><a href="#">Blog</a></li>
-                    <li><a href="#">Contact</a></li>
-                </ul>
+                
+                <!-- THE FOLLOWING HTML AND ACCOMPANYING CSS FOR THE NAVBAR IS FROM SOURCE : https://codepen.io/jo_Geek/pen/xgbaEr -->
+
+                <div class="navButton">
+                    <label for="navCheck">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </label>
+                </div>
+                
+                <input type="checkbox" id="navCheck">
+                
+                <div class="navLinks clearfix">
+                    <a href="#">Home</a>
+                    <a href="#">About</a>
+                    <a href="#">Blog</a>
+                    <a href="#">Contact</a>
+                </div>
             </nav>
 
             <h1>Animal<span>Refuge</span></h1>
@@ -88,21 +101,21 @@
             <div class="wrapper clearfix">
 
                 <div class="slot">
-                    <a href="#animalSpotlight">
+                    <a href="#">
                         <div><i class="fas fa-paw"></i></div>
-                        <p>Animal Spotlight</p>
+                        <p>Animal <span>Spotlight</span></p>
                     </a>
                 </div>
 
                 <div class="slot">
-                    <a href="#events">
+                    <a href="#">
                         <div><i class="fas fa-calendar-check"></i></div>
                         <p>Events</p>
                     </a>
                 </div>
 
                 <div class="slot">
-                    <a href="#merch">
+                    <a href="#">
                         <div><i class="fas fa-shopping-bag"></i></div>
                         <p>Merch</p>
                     </a>
@@ -114,27 +127,31 @@
         <!-- SECTION 4 STARTS HERE -->
 
         <section class="articles">
-            <div class="articlesWrapper clearfix">
-                <div class="articleContent imgHolder">
-                    <img src="assets/image-6.png" alt="">
-                </div>
-                <div class="articleContent articleSumm">
-                    <h3>Fascinating Facts About Zebras</h3>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla pulvinar tortor a elementum eleifend. Vestibulum
-                    consequat vestibulum felis pharetra luctus. Quisque interdum orci quis convallis dapibus. Vestibulum vitae tincidunt
-                    sem, a blandit sem. Quisque interdum orci.</p>
-                    <button>Read More</button>
+            <div class="wrapper clearfix">
+                <div class="article1">
+                    <div class="imgHolder">
+                        <img src="assets/image-6.png" alt="">
+                    </div>
+                    <div class="articleSumm">
+                        <h3>Fascinating Facts <span>About Zebras</span></h3>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla pulvinar tortor a elementum eleifend. Vestibulum
+                        consequat vestibulum felis pharetra luctus. Quisque interdum orci quis convallis dapibus. Vestibulum vitae tincidunt
+                        sem, a blandit sem. Quisque interdum orci.</p>
+                        <button>Read More</button>
+                    </div>
                 </div>
 
-                <div class="articleContent imgHolder">
-                    <img src="assets/image-7.png" alt="">
-                </div>
-                <div class="articleContent articleSumm">
-                    <h3>The Bond Between Animals and Humans</h3>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla pulvinar tortor a elementum eleifend. Vestibulum
-                    consequat vestibulum felis pharetra luctus. Quisque interdum orci quis convallis dapibus. Vestibulum vitae tincidunt
-                    sem, a blandit sem. Quisque interdum orci.</p>
-                    <button>Read More</button>
+                <div class="article2">
+                    <div class="imgHolder">
+                        <img src="assets/image-7.png" alt="">
+                    </div>
+                    <div class="articleSumm">
+                        <h3>The Bond Between Animals and Humans</h3>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla pulvinar tortor a elementum eleifend. Vestibulum
+                        consequat vestibulum felis pharetra luctus. Quisque interdum orci quis convallis dapibus. Vestibulum vitae tincidunt
+                        sem, a blandit sem. Quisque interdum orci.</p>
+                        <button>Read More</button>
+                    </div>
                 </div>
             </div>
         </section>
@@ -151,10 +168,10 @@
             <div class="wrapper clearfix">
                 <div class="directory">
                     <ul class="clearfix">
-                        <li><a href="#home">Home</a></li>
-                        <li><a href="#blog">Blog</a></li>
-                        <li><a href="#gallery">Gallery</a></li>
-                        <li><a href="#contact">Contact</a></li>
+                        <li><a href="#">Home</a></li>
+                        <li><a href="#">Blog</a></li>
+                        <li><a href="#">Gallery</a></li>
+                        <li><a href="#">Contact</a></li>
                     </ul>
                 </div>
 

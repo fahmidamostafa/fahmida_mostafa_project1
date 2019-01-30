@@ -14,10 +14,6 @@ p {
     line-height: 1.5;
 }
 
-header {
-    background: #C1D8C5;
-}
-
 .featured, .activities, .footerTop {
     background: #013220;
 }
@@ -32,10 +28,13 @@ a {
     color: white;
 }
 
+span {
+    display: block;
+}
+
 .wrapper {
     max-width: 1200px;
     margin: 0 auto;
-    border: 2px solid rebeccapurple;
     padding: 110px 0;
 }
 
@@ -51,9 +50,7 @@ header {
     background: url(../assets/image-1.png);
     min-height: 100vh;
     background-size: cover;
-    background-attachment: fixed;
-    /* background-repeat: no-repeat; */
-    /* background-position: center 30%; */
+    background-position: 30% center;
 }
 
 header .wrapper {
@@ -73,7 +70,6 @@ ul {
 
 li {
     padding: 5px 10px;
-    background: lightcoral;
 }
 
 nav {
@@ -82,17 +78,53 @@ nav {
     font-family: 'CormorantGaramond';
 }
 
-nav ul li {
-    float: left;
+/* THE FOLLOWING CSS FOR THE NAVBAR IS FROM SOURCE : https://codepen.io/jo_Geek/pen/xgbaEr */
+
+#navCheck {
+    display: none;
 }
 
-nav ul li:nth-of-type(4n + 1) {
-    padding-left: 0;    /* taken from margin example; how to resolve padding issue? */
+.navLinks a {
+    padding: 0.35rem;
 }
 
 @media (max-width: 400px) {
-    nav {
-        display: none;
+    .navButton {
+        position: absolute;
+        top: 3%;
+        right: 5%;
+    }
+
+    .navButton label span {
+        width: 2rem;
+        height: 0.5rem;
+        border-top: 2px solid #fff;
+    }
+
+    .navLinks {
+        position: absolute;
+        width: 7.5rem;
+        background-color: rgba(1, 50, 32, 0.3);
+        transition: all 0.3s ease-in;
+        overflow-y: hidden;
+        top: 6%;
+        right: 5%;
+    }
+
+    .navLinks a {
+        float: left;
+        text-align: right;
+        padding: 0.5rem;
+        width: 100%;
+    }
+    
+    #navCheck:not(:checked) + .navLinks {
+        height: 0px;
+    }
+
+    #navCheck:checked + .navLinks {
+        height: 9.5rem;
+        overflow-y: auto;
     }
 }
 
@@ -105,25 +137,21 @@ h1 {
     margin: 0;
     position: absolute;
     bottom: 50%;
-    right: 10%;
+    right: 12.5%;
 }
 
-span {
-    display: block;
+@media (max-width: 1080px) {
+    h1 {
+        font-size: 3rem;
+    }
 }
-
-/* when resizing horizontally, h1 does not remain right-aligned */
 
 @media (max-width: 400px) {
-    .h1Wrapper {
-        bottom: 0;
-        right: 0;
-        top: 5%;
-        left: 5%;
-    }
-
-    header h1 {
-        font-size: 1rem;
+    h1 {
+        font-size: 1.5rem;
+        top: 2.5%;
+        left: 10%;
+        text-align: left;
     }
 }
 
@@ -141,10 +169,29 @@ span {
 
 /************************* SECTION 1 STYLES *************************/
 
-.featured .storyImg {
+.storyImg {
     width: calc(37% - 40px);
     margin-right: 40px;
     float: left;
+}
+
+.storyImg img {
+    width: 100%;
+    display: block;
+}
+
+.storyContent {
+    width: 63%;
+    float: left;
+}
+
+@media (max-width: 918px) {
+    .storyImg {
+        width: calc(50% - 40px);
+    }
+    .storyContent {
+        width: 50%;
+    }
 }
 
 @media (max-width: 400px) {
@@ -154,9 +201,10 @@ span {
     }
 }
 
-.storyImg img {
-    width: 100%;
-    display: block;
+@media (max-width: 400px) {
+    .storyContent {
+        width: 100%;
+    }
 }
 
 h2 {
@@ -176,17 +224,6 @@ h2 {
 
 .featured h2 {
     color: #fff;
-}
-
-.storyContent {
-    width: 63%;
-    float: left;
-}
-
-@media (max-width: 400px) {
-    .storyContent {
-        width: 100%;
-    }
 }
 
 button {
@@ -220,13 +257,13 @@ button {
 @media (max-width: 400px) {
     .gallery h2 {
         margin: 0 auto;
+        padding-bottom: 40px;
     }
 }
 
 .galleryItem {
     width: calc((100% - 80px) / 3);
     float: left;
-    background: navy;
     margin: 0 20px;
 }
 
@@ -264,21 +301,10 @@ button {
     width: calc((100% - 320px) / 3);
     float: left;
     margin: 0 80px;
-    background: lightblue;
     font-size: 3rem;
     text-align: center;
     word-wrap: break-word;
 }
-
-@media (max-width: 400px) {
-    .slot {
-        float: none;
-        width: 100%;
-        margin: 0;
-    }
-}
-
-/* How to vertical align center? */
 
 .slot p {
     font-size: 1.75rem;
@@ -293,6 +319,32 @@ button {
     margin-right: 0;
 }
 
+@media (max-width: 918px) {
+
+    .slot:nth-child(3n + 1) {
+        margin: 0 auto;
+    }
+
+    .slot:nth-child(3n) {
+        margin: 0 auto;
+    }
+
+    .slot {
+        width: 60%;
+        margin: 0 auto;
+        float: none;
+        clear: both;
+    }
+}
+
+@media (max-width: 400px) {
+    .slot {
+        float: none;
+        width: 100%;
+        margin: 0;
+    }
+}
+
 /************************* SECTION 4 STYLES *************************/
 
 .articles .wrapper {
@@ -301,21 +353,33 @@ button {
     min-width: 100%;
 }
 
-.articleContent {
-    margin: 0;
-    float: left;
-    clear: none;
+.imgHolder, .articleSumm {
     width: 50%;
-    border: 1px solid #808080;
 }
 
-.articleContent:nth-child(4n+3) {
-    clear: left;
+.article1 .imgHolder {
+    float: right;
+}
+
+.article2 {
+    clear: both;
+}
+
+.article2 .imgHolder, .article2 .articleSumm {
+    float: left;
 }
 
 .imgHolder img {
     width: 100%;
     display: block;
+}
+
+.article1 .articleSumm {
+    padding: 7% 4% 7% 10%;
+}
+
+.article2 .articleSumm {
+    padding: 7% 8% 7% 6%;
 }
 
 h3 {
@@ -326,41 +390,38 @@ h3 {
     margin: 0;
 }
 
-.articleContent p {
+.articles p {
     color: #1f2022;
 }
 
-.articleContent button {
+.articles button {
     background: #013220;
     color: #fff;
+    margin-top: 7.5%;
 }
 
-/* .articleDesc article, .articleDesc .articleImg {
-    float: left;
-    width: 50%;
-}
-
-@media (max-width: 400px) {
-    .articleDesc article, .articleDesc .articleImg {
-        float: none;
+@media (max-width: 700px) {
+    .article1 .imgHolder, .article1 .articleSumm, .article2 .imgHolder, .article2 .articleSumm {
         width: 100%;
+        float: none;
+    }
+
+    .article1 .articleSumm, .article2 .articleSumm {
+        padding: 1.8rem 1rem 2.5rem 1rem;
+    }
+
+    .articles {
         text-align: center;
     }
-}
 
-article {
-    padding: 7.5% 6%;
-}
+    .articles p {
+        font-size: 0.9rem;
+    }
 
-@media (max-width: 400px) {
-    article {
-        padding: 1.8rem 1rem;
+    h3 {
+        font-size: 1.1rem;
     }
 }
-
-.articleImg {
-    background: peru;
-} */
 
 /************************* FOOTER TOP STYLES *************************/
 
@@ -384,10 +445,6 @@ h4 {
     font-family: 'CormorantGaramond';
 }
 
-@media (max-width: 400px) {
-
-}
-
 .searchBar {
     width: 48%;
     text-align: center;
@@ -397,7 +454,6 @@ h4 {
 .email {
     width: 75%;
     padding: 10px 30px;
-    border: 1px solid #000;
     float: left;
 }
 
@@ -406,7 +462,7 @@ h4 {
     text-transform: uppercase;
     width: 25%;
     padding: 2%;
-    border: 1px solid #000;
+    border: none;
     background: #000;
     color: #fff;
     float: left;
@@ -422,21 +478,26 @@ h4 {
     margin: 5px 0;
 }
 
-@media (max-width: 400px) {
+@media (max-width: 1070px) {
     footer p {
         font-size: 0.8rem;
     }
 
-    .directory, .searchBar, .contactInfo, .email, .submit {
+    .directory {
         float: none;
         width: 100%;
-        margin: 0.25rem 0;
         text-align: center;
     }
 
+    .searchBar, .contactInfo, .email, .submit {
+        float: none;
+        width: 65%;
+        margin: 0.25rem auto;
+        text-align: center;
+    }
+    
     .directory ul li {
-        float: left;
-        padding: 0.2rem;
+        padding: 2%;
     }
 
     .searchBar {
@@ -445,6 +506,13 @@ h4 {
 
     .submit {
         font-family: 'Roboto';
+        padding: 4% 2%;
+    }
+}
+
+@media (max-width: 400px) {
+    .directory, .searchBar, .contactInfo, .email, .submit {
+        width: 100%;
     }
 }
 
